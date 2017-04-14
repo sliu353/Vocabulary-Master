@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "VocabularyMaster",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "css": ["css/font-awesome/font-awesome.css", "css/style.css",  "styleVM.css"],
+      "js": [  "jquery-3.2.0.min.js", "scriptVM.js", "js/html5shiv.min.js" ],
+	  "web_accessible_resources": [
+			"css/font-awesome/FontAwesome.otf",
+			"css/font-awesome/fontawesome-webfont.eot",
+			"css/font-awesome/fontawesome-webfont.svg",
+			"css/font-awesome/fontawesome-webfont.ttf",
+			"css/font-awesome/fontawesome-webfont.woff"
+		]
+    }
+  ]
+}
